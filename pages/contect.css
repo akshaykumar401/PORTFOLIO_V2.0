@@ -1,0 +1,294 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-family: "Lora", serif;
+}
+
+body {
+    background-image: url(../src/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(51, 134, 180), rgb(40, 214, 167));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    position: fixed;
+    top: 0px;
+}
+
+.nav-element>ul>a>h3:hover {
+    transition: ease-in-out 0.25s;
+    color: darkmagenta;
+}
+
+.active {
+    color:crimson;
+    border-bottom: 2px solid crimson;
+}
+
+h1 {
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nav-element {
+    display: flex;
+    gap: 30px;
+}
+
+.dot {
+    display: none;
+}
+
+.nav-element>ul>a {
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    background-image: linear-gradient(to right,rgb(51, 134, 180), rgb(40, 214, 167));
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    bottom: 0px;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 65px;
+    align-items: center;
+}
+
+.container {
+    width: 25vw;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 5.3rem;
+}
+
+.my-image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.my-image>img {
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 10px 10px 20px mediumaquamarine;
+}
+
+.link>h4 {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.link-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.6rem;
+    /* padding-top: 0.3rem; */
+}
+
+.linkedin {
+    color: blue;
+}
+
+.X {
+    color: black;
+}
+
+.Gmail {
+    color: red;
+    cursor: pointer;
+}
+
+.hover:hover {
+    scale: 1.4;
+    transition: 0.5s ease-in-out;
+}
+
+.msg {
+    width: 100%;
+    font-size: 1.6vw;
+    text-align: center;
+    display: none;
+}
+
+
+
+
+@media (min-width : 960px){
+    .nav-element{
+        display: flex;
+    }
+}
+
+@media (max-width : 960px){
+
+    .nav-element{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        background-image: linear-gradient(to left,rgb(51, 134, 180), rgb(40, 214, 167));
+        text-align: center;
+        line-height: 2;
+        animation: act 0.25s linear;
+    }
+
+    @keyframes act{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+    }
+
+    @keyframes dec{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+    }
+
+    .nav-element>ul {
+        border-top: 2px solid #000;
+    }
+
+    .dot {
+        display: block;
+    }
+
+    .container {
+        width: 35vw;
+    }
+
+    .link {
+        width: 100%;
+    }
+
+    .link>h4 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width : 520px){
+    footer {
+        font-size: 1rem;
+        padding-top: 6px;
+    }
+
+    .nav-element {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        height: auto;
+        animation: act 0.25s linear;
+    }
+
+    @keyframes act{
+        0% {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: -33;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            z-index: -33;
+        }
+    }
+
+    @keyframes dec{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+    }
+
+    .container {
+        width: 50vw;
+    }
+
+    .my-image {
+        font-size: 5vw;
+    }
+
+    .link {
+        width: 100%;
+    }
+
+    .link>h4 {
+        font-size: 4.9vw;
+    }
+
+    .msg {
+        font-size: 3vw;
+    }
+}

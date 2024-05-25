@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #000;
+    font-family: "Lora", serif;
+}
+
+body {
+    background-image: url(../src/Background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-image: linear-gradient(to left,rgb(51, 134, 180), rgb(40, 214, 167));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    position: fixed;
+    top: 0px;
+}
+
+.nav-element>ul>a>h3:hover {
+    transition: ease-in-out 0.25s;
+    color: darkmagenta;
+}
+
+.active {
+    color:crimson;
+    border-bottom: 2px solid crimson;
+}
+
+h1 {
+    font-family: "Satisfy", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nav-element {
+    display: flex;
+    gap: 30px;
+}
+
+.dot {
+    display: none;
+}
+
+.nav-element>ul>a {
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    background-image: linear-gradient(to right,rgb(51, 134, 180), rgb(40, 214, 167));
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    bottom: 0px;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 100px);
+    padding-bottom: 50px;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scool1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h5 {
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    text-decoration: rgb(23, 0, 128) wavy underline;
+}
+
+.scool_about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.scool_about>ul {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 40%;
+}
+
+.scool_about>img {
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgb(19, 252, 46);
+}
+
+.scool2 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid black;
+    padding-top: 15px;
+}
+
+.scool3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid black;
+    padding-top: 15px;
+    padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+@media (min-width : 960px){
+    .nav-element{
+        display: flex;
+    }
+}
+
+@media (max-width : 960px){
+
+    .nav-element{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 30%;
+        background-image: linear-gradient(to left,rgb(51, 134, 180), rgb(40, 214, 167));
+        text-align: center;
+        line-height: 2;
+        animation: act 0.25s linear;
+    }
+
+    @keyframes act{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+    }
+
+    @keyframes dec{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+    }
+
+    .nav-element>ul {
+        border-top: 2px solid #000;
+    }
+
+    .dot {
+        display: block;
+    }
+
+    .scool_about {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .scool_about>img{
+        width: 80%;
+    }
+
+    .scool_about>ul{
+        width: 70%;
+    }
+
+}
+
+@media (max-width : 520px){
+    footer {
+        font-size: 1rem;
+        padding-top: 6px;
+    }
+
+    .nav-element {
+        display: none;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        height: auto;
+        animation: act 0.25s linear;
+    }
+
+    @keyframes act{
+        0% {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: -33;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            z-index: -33;
+        }
+    }
+
+    @keyframes dec{
+        0% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 30%;
+        }
+
+        100% {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 0%;
+        }
+    }
+}
